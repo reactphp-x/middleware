@@ -16,7 +16,7 @@ require __DIR__ . '/vendor/autoload.php';
 $http = new React\Http\HttpServer(
     new Reactphp\Framework\Middleware\FiberHandler,
     new Reactphp\Framework\Middleware\TrustedProxyMiddleware,
-    new Reactphp\Framework\Middleware\CrosMiddleware,
+    new Reactphp\Framework\Middleware\CorsMiddleware,
     function (Psr\Http\Message\ServerRequestInterface $request) {
         return React\Http\Message\Response::plaintext(
             "Hello World!\n"
@@ -40,7 +40,7 @@ $http = new React\Http\HttpServer(
     new MiddlewareHandler([
         new Reactphp\Framework\Middleware\FiberHandler,
         new Reactphp\Framework\Middleware\TrustedProxyMiddleware,
-        new Reactphp\Framework\Middleware\CrosMiddleware,
+        new Reactphp\Framework\Middleware\CorsMiddleware,
         function (Psr\Http\Message\ServerRequestInterface $request) {
             return React\Http\Message\Response::plaintext(
                 "Hello World!\n"

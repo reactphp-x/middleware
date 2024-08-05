@@ -6,7 +6,7 @@ use React\Http\Message\Response;
 use function React\Promise\resolve;
 
 
-class CrosMiddleware
+class CorsMiddleware
 {
     public function __invoke($request, $next) {
         $withHeaders = [
@@ -17,7 +17,7 @@ class CrosMiddleware
         ];
 
         if ($request->getMethod() == 'OPTIONS') {
-            return new Response(200, $withHeaders, 'OK');
+            return new Response(204, $withHeaders);
         }
 
         return resolve($next($request))->then(
