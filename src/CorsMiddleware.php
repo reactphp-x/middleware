@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactphp\Framework\Middleware;
+namespace ReactphpX\Middleware;
 
 use React\Http\Message\Response;
 use function React\Promise\resolve;

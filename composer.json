@@ -1,9 +1,9 @@
 {
-    "name": "reactphp-framework/middleware",
+    "name": "reactphp-x/middleware",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Reactphp\\Framework\\Middleware\\": "src/"
+            "ReactphpX\\Middleware\\": "src/"
         }
     },
     "authors": [

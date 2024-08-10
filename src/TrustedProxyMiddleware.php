@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactphp\Framework\Middleware;
+namespace ReactphpX\Middleware;
 
 
 // source https://github.com/zendframework/zend-http/blob/master/src/PhpEnvironment/RemoteAddress.php

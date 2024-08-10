@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactphp\Framework\Middleware;
+namespace ReactphpX\Middleware;
 
 use Psr\Http\Message\ServerRequestInterface;
 

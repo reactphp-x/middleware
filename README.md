@@ -1,9 +1,9 @@
-# reactphp-framework-middleware
+# reactphp-x-middleware
 
 ## install
 
 ```
-composer require reactphp-framework/middleware -vvv
+composer require reactphp-x/middleware -vvv
 ```
 
 ## usage
@@ -14,9 +14,9 @@ composer require reactphp-framework/middleware -vvv
 require __DIR__ . '/vendor/autoload.php';
 
 $http = new React\Http\HttpServer(
-    new Reactphp\Framework\Middleware\FiberHandler,
-    new Reactphp\Framework\Middleware\TrustedProxyMiddleware,
-    new Reactphp\Framework\Middleware\CorsMiddleware,
+    new ReactphpX\Middleware\FiberHandler,
+    new ReactphpX\Middleware\TrustedProxyMiddleware,
+    new ReactphpX\Middleware\CorsMiddleware,
     function (Psr\Http\Message\ServerRequestInterface $request) {
         return React\Http\Message\Response::plaintext(
             "Hello World!\n"
@@ -38,9 +38,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 $http = new React\Http\HttpServer(
     new MiddlewareHandler([
-        new Reactphp\Framework\Middleware\FiberHandler,
-        new Reactphp\Framework\Middleware\TrustedProxyMiddleware,
-        new Reactphp\Framework\Middleware\CorsMiddleware,
+        new ReactphpX\Middleware\FiberHandler,
+        new ReactphpX\Middleware\TrustedProxyMiddleware,
+        new ReactphpX\Middleware\CorsMiddleware,
         function (Psr\Http\Message\ServerRequestInterface $request) {
             return React\Http\Message\Response::plaintext(
                 "Hello World!\n"
